@@ -11,3 +11,9 @@ print(products)
 #for loop : 一個一個取出清單中的東西
 for p in products:
 	print(p[0], '的價格是', p[1])#清單裡面的小清單位置
+
+#寫入檔案
+with open('products.csv', 'w' , encoding = 'utf-8') as f:
+	f.write('商品,價格\n')
+	for p in products:
+		f.write(p[0] + ',' + p[1] + '\n')
